@@ -538,6 +538,14 @@ contains
          decomp%y2cnts(0:dims(2)-1),decomp%z2cnts(0:dims(2)-1))
     allocate(decomp%x1disp(0:dims(1)-1),decomp%y1disp(0:dims(1)-1), &
          decomp%y2disp(0:dims(2)-1),decomp%z2disp(0:dims(2)-1))
+    decomp%x1cnts = 0
+    decomp%y1cnts = 0
+    decomp%y2cnts = 0
+    decomp%z2cnts = 0
+    decomp%x1disp = 0
+    decomp%y1disp = 0
+    decomp%y2disp = 0
+    decomp%z2disp = 0
     call prepare_buffer(decomp)
 
 #ifdef SHM
